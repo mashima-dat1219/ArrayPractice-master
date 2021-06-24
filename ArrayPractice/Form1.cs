@@ -15,6 +15,7 @@ namespace ArrayPractice
         static Random rand = new Random();
 
         const int LavelMax = 10;
+        int Hanrei = 5;
         int []vx = new int[LavelMax];
         int []vy = new int[LavelMax];
         Label[] labels = new Label[LavelMax];
@@ -70,10 +71,10 @@ namespace ArrayPractice
                     vy[i] = -Math.Abs(vy[i]);
                 }
 
-                if ((fpos.X >= labels[i].Left+10)
-                && (fpos.X < labels[i].Right+10)
-                && (fpos.Y >= labels[i].Top+10)
-                && (fpos.Y < labels[i].Bottom+10))
+                if ((fpos.X >= labels[i].Left - Hanrei)
+                && (fpos.X < labels[i].Right + Hanrei)
+                && (fpos.Y >= labels[i].Top - Hanrei)
+                && (fpos.Y < labels[i].Bottom + Hanrei))
                 {
                     labels[i].Visible = false;
                 }

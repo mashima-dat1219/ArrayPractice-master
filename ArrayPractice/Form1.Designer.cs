@@ -42,7 +42,7 @@ namespace ArrayPractice
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(201, 124);
+            this.label1.Location = new System.Drawing.Point(201, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 30);
             this.label1.TabIndex = 0;
@@ -71,7 +71,7 @@ namespace ArrayPractice
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(78, 124);
+            this.label2.Location = new System.Drawing.Point(65, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 30);
             this.label2.TabIndex = 2;
@@ -82,7 +82,7 @@ namespace ArrayPractice
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(320, 124);
+            this.label3.Location = new System.Drawing.Point(333, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 30);
             this.label3.TabIndex = 3;
