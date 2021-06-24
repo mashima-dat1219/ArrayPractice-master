@@ -34,6 +34,12 @@ namespace ArrayPractice
             label1.Left += vx;
             label1.Top += vy;
 
+            label2.Left += vx;
+            label2.Top += vy;
+
+            label3.Left += vx;
+            label3.Top += vy;
+
             if (label1.Left < 0)
             {
                 vx = Math.Abs(vx);
