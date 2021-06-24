@@ -14,8 +14,12 @@ namespace ArrayPractice
     {
         static Random rand = new Random();
 
-        int vx = rand.Next(-20, 21);
-        int vy = rand.Next(-20, 21);
+        int vx1 = rand.Next(-20, 21);
+        int vy1 = rand.Next(-20, 21);
+        int vx2 = rand.Next(-20, 21);
+        int vy2 = rand.Next(-20, 21);
+        int vx3 = rand.Next(-20, 21);
+        int vy3 = rand.Next(-20, 21);
         int score = 100;
 
         public Form1()
@@ -31,30 +35,64 @@ namespace ArrayPractice
             score--;
             scoreLabel.Text = $"Score {score:000}";
 
-            label1.Left += vx;
-            label1.Top += vy;
+            label1.Left += vx1;
+            label1.Top += vy1;
 
-            label2.Left += vx;
-            label2.Top += vy;
+            label2.Left += vx2;
+            label2.Top += vy2;
 
-            label3.Left += vx;
-            label3.Top += vy;
+            label3.Left += vx3;
+            label3.Top += vy3;
 
             if (label1.Left < 0)
             {
-                vx = Math.Abs(vx);
+                vx1 = Math.Abs(vx1);
             }
             if (label1.Top < 0)
             {
-                vy = Math.Abs(vy);
+                vy1 = Math.Abs(vy1);
             }
             if (label1.Right > ClientSize.Width)
             {
-                vx = -Math.Abs(vx);
+                vx1 = -Math.Abs(vx1);
             }
             if (label1.Bottom > ClientSize.Height)
             {
-                vy = -Math.Abs(vy);
+                vy1 = -Math.Abs(vy1);
+            }
+
+            if (label2.Left < 0)
+            {
+                vx2 = Math.Abs(vx2);
+            }
+            if (label2.Top < 0)
+            {
+                vy2 = Math.Abs(vy2);
+            }
+            if (label2.Right > ClientSize.Width)
+            {
+                vx2 = -Math.Abs(vx2);
+            }
+            if (label2.Bottom > ClientSize.Height)
+            {
+                vy2 = -Math.Abs(vy2);
+            }
+
+            if (label3.Left < 0)
+            {
+                vx3 = Math.Abs(vx3);
+            }
+            if (label3.Top < 0)
+            {
+                vy3 = Math.Abs(vy3);
+            }
+            if (label3.Right > ClientSize.Width)
+            {
+                vx3 = -Math.Abs(vx3);
+            }
+            if (label3.Bottom > ClientSize.Height)
+            {
+                vy3 = -Math.Abs(vy3);
             }
 
             Point fpos = PointToClient(MousePosition);
@@ -66,6 +104,23 @@ namespace ArrayPractice
             {
                 timer1.Enabled = false;
             }
+
+            if ((fpos.X >= label2.Left)
+                && (fpos.X < label2.Right)
+                && (fpos.Y >= label2.Top)
+                && (fpos.Y < label2.Bottom))
+            {
+                timer1.Enabled = false;
+            }
+
+            if ((fpos.X >= label3.Left)
+                && (fpos.X < label3.Right)
+                && (fpos.Y >= label3.Top)
+                && (fpos.Y < label3.Bottom))
+            {
+                timer1.Enabled = false;
+            }
+
         }
     }
 }
