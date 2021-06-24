@@ -28,6 +28,10 @@ namespace ArrayPractice
 
             label1.Left = rand.Next(ClientSize.Width - label1.Width);
             label1.Top = rand.Next(ClientSize.Height - label1.Height);
+            label2.Left = rand.Next(ClientSize.Width - label2.Width);
+            label2.Top = rand.Next(ClientSize.Height - label2.Height);
+            label3.Left = rand.Next(ClientSize.Width - label3.Width);
+            label3.Top = rand.Next(ClientSize.Height - label3.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -37,10 +41,8 @@ namespace ArrayPractice
 
             label1.Left += vx1;
             label1.Top += vy1;
-
             label2.Left += vx2;
             label2.Top += vy2;
-
             label3.Left += vx3;
             label3.Top += vy3;
 
@@ -97,36 +99,33 @@ namespace ArrayPractice
 
             Point fpos = PointToClient(MousePosition);
 
-            if ((fpos.X >= label1.Left)
+            if (   (fpos.X >= label1.Left)
                 && (fpos.X < label1.Right)
                 && (fpos.Y >= label1.Top)
                 && (fpos.Y < label1.Bottom))
             {
-                //timer1.Enabled = false;
                 label1.Visible = false;
             }
 
-            if ((fpos.X >= label2.Left)
+            if (   (fpos.X >= label2.Left)
                 && (fpos.X < label2.Right)
                 && (fpos.Y >= label2.Top)
                 && (fpos.Y < label2.Bottom))
             {
-                //timer1.Enabled = false;
                 label2.Visible = false;
             }
 
-            if ((fpos.X >= label3.Left)
+            if (   (fpos.X >= label3.Left)
                 && (fpos.X < label3.Right)
                 && (fpos.Y >= label3.Top)
                 && (fpos.Y < label3.Bottom))
             {
-                //timer1.Enabled = false;
                 label3.Visible = false;
             }
 
-            if(    label1.Visible == false
-                && label2.Visible == false
-                && label3.Visible == false  )
+            if(    (label1.Visible == false)
+                && (label2.Visible == false)
+                && (label3.Visible == false))
             {
                 timer1.Enabled = false;
             }
