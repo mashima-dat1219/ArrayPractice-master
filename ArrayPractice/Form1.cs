@@ -18,12 +18,13 @@ namespace ArrayPractice
         int []vy = new int[100];
         Label[] labels = new Label[100];
         int score = 100;
+        
 
         public Form1()
         {
             InitializeComponent();
             
-            for(int i = 0; i < 100; i++)
+            for(int i = 0; i < 10; i++)
             {
                 vx[i] = rand.Next(-20, 21);
                 vy[i] = rand.Next(-20, 21);
@@ -43,10 +44,11 @@ namespace ArrayPractice
         {
             score--;
             scoreLabel.Text = $"Score {score:000}";
+            int count = 0;
 
             Point fpos = PointToClient(MousePosition);
 
-            for (int i=0;i<100;i++)
+            for (int i=0;i<10;i++)
             {
                 labels[i].Left += vx[i];
                 labels[i].Top += vy[i];
@@ -76,13 +78,13 @@ namespace ArrayPractice
                     labels[i].Visible = false;
                 }
             }
-
-            if(    (label1.Visible == false)
-                && (label2.Visible == false)
-                && (label3.Visible == false))
+            
+            for(int i=0;i<10;i++)
             {
-                timer1.Enabled = false;
+                if (labels[i].Visible == false) count++;
             }
+            if(count==10) timer1.Enabled = false;
+
         }
     }
 }
