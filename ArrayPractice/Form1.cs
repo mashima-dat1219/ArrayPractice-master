@@ -19,7 +19,6 @@ namespace ArrayPractice
         Label[] labels = new Label[100];
         int score = 100;
         
-
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +36,7 @@ namespace ArrayPractice
                 labels[i].Left = rand.Next(ClientSize.Width - labels[i].Width);
                 labels[i].Top = rand.Next(ClientSize.Height - labels[i].Height);
             }
-            //timer1.Enabled = true;
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -70,10 +69,10 @@ namespace ArrayPractice
                     vy[i] = -Math.Abs(vy[i]);
                 }
 
-                if ((fpos.X >= labels[i].Left)
-                && (fpos.X < labels[i].Right)
-                && (fpos.Y >= labels[i].Top)
-                && (fpos.Y < labels[i].Bottom))
+                if ((fpos.X >= labels[i].Left+10)
+                && (fpos.X < labels[i].Right+10)
+                && (fpos.Y >= labels[i].Top+10)
+                && (fpos.Y < labels[i].Bottom+10))
                 {
                     labels[i].Visible = false;
                 }
